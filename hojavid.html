@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de vida</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <h1>Hoja de vida</h1>
+            <a href="#" onclick="showSection('inicio')">Inicio</a>
+            <a href="#" onclick="showSection('datos-personales')">Datos personales</a>
+            <a href="#" onclick="showSection('presentacion-personal')">Presentación personal</a>
+            <a href="#" onclick="showSection('gustos-hobbies')">Gustos y hobbies</a>
+            <a href="#" onclick="showSection('proyectos-corto-plazo')">Proyectos a corto plazo</a>
+            <a href="#" onclick="showSection('portafolio-proyectos')">Portafolio proyectos</a>
+        </div>
+        <div class="content">
+            <div id="inicio" class="section active">
+                <h2>Inicio</h2>
+                <p>Bienvenido a mi hoja de vida.</p>
+                <p> Aquí encontrarás información sobre mí, mis proyectos y mis gustos y te contaré un poco sobre mi vida. </p>
+            </div>
+            <div id="datos-personales" class="section">
+                <h2>Datos personales</h2>
+            <img src="fotoo.jpeg" alt="Foto de perfil" height="200px" width="200px">
+                <p>Nombre completo: Ana Maria Pérez Hernández</p>
+                <p>Edad: 16 años</p>
+                <p>Fecha de nacimiento: 14 de junio del 2007</p>
+                <p>Dirección: Calle 99 #35 06</p>
+                <p>Correo electrónico: anamariaperezhernandez2021@gmail.com</p>
+                <p>Tipo de documento: Tarjeta de identidad</p>
+                <p>Número de documento: 1011396550 </p>
+                <p>Número celular: 3217369312</p>
+            </div>
+            <div id="presentacion-personal" class="section">
+                <h2>Presentación personal</h2>
+                <p>Mi nombre es Ana Maria Pérez Hernández, tengo 16 años.
+
+                <p> Soy estudiante de la institucion educativa San Pablo del grado 11 y estoy en media tecnica de programacion de software.
+                      Me gusta escuchar musica en especial en ingles, me gusta pintar y la naturaleza.</p>
+
+                <p>  Vivo con mi mamá, mis 2 hermanos y mis 2 gatas.
+                       Me gusta el tenis de campo y estoy tratando de entrar a clases de ello.</p>
+            </div>
+            <div id="gustos-hobbies" class="section">
+                <h2>Gustos y hobbies</h2>
+                <div>
+                    <h3>Gustos</h3>
+                    <p>- Música</p>
+                    <p>- Cine</p>
+                    <p>- arte</p>
+                    <p>- naturaleza</p>
+                    <p>- tenis</p>
+                </div>
+                <div>
+                    <h3>Hobbies</h3>
+                    <p>- pintar</p>
+                    <p>- ver peliculas o series</p>
+                    <p>- Juegos de mesa</p>
+                </div>
+            </div>
+            <div id="proyectos-corto-plazo" class="section">
+                <h2>Proyectos a corto plazo</h2>
+                <p>Actualmente estoy estudiando y pronto me graduaré. pero por el momento quiero empezar a trabajar asi sea en un almacen o vendiendo cosas online.</p>
+
+                <p> También estoy indagando temas de mi interes para saber que querio estudiar en la universidad.</p>
+            </div>
+            <div id="portafolio-proyectos" class="section">
+                <h2>Portafolio proyectos</h2>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.getElementsByClassName('section');
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].classList.remove('active');
+            }
+            const section = document.getElementById(sectionId);
+            section.classList.add('active');
+        }
+    </script>
+</body>
+</html>
